@@ -15,7 +15,7 @@ let year = 2022;
 document.querySelector('#year').textContent = year;
 
 // Step 5: declare and instantiate a variable to hold the name of your picture
-const myPhoto = 'week02/images/photo_of_me.jpg';
+const myPhoto = 'images/photo_of_me.jpg';
 
 // Step 6: copy your image into the "images" folder
 // done
