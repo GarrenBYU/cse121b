@@ -21,37 +21,37 @@ const myPhoto = 'https://github.com/GarrenBYU/cse121b/blob/f87a48a3e712e78bc5281
 // done
 
 // Step 7: place the value of the picture variable into the HTML file (hint: document.querySelector().setAttribute())
-document.querySelector('#img').src = myPhoto;
+document.querySelector('#img').setAttribute('src', myPhoto);
 
 
 
 /* ARRAYS */
 
 // Step 1: declare and instantiate an array variable to hold your favorite foods
-
+favoriteFoods = ["Pizza", " Pumpkin Macaroni", " Cinnimon Rolls"]
 
 // Step 2: place the values of the favorite foods variable into the HTML file
-
+document.querySelector('#food').textContent = favoriteFoods;
 
 // Step 3: declare and instantiate a variable to hold another favorite food
-
+secondFood = " Blox Dessert bars";
 
 // Step 4: add the variable holding another favorite food to the favorite food array
-
+favoriteFoods.push(secondFood);
 
 // Step 5: repeat Step 2
-
+document.querySelector('#food').textContent = favoriteFoods;
 
 // Step 6: remove the first element in the favorite foods array
-
+ favoriteFoods.shift()
 
 // Step 7: repeat Step 2
-
+document.querySelector('#food').textContent = favoriteFoods;
 
 // Step 8: remove the last element in the favorite foods array
-
+favoriteFoods.pop()
 
 // Step 7: repeat Step 2
-
+document.querySelector('#food').textContent = favoriteFoods;
 
 
