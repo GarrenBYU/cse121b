@@ -75,15 +75,21 @@ document.querySelector('#year').textContent = y
 /* ARRAY METHODS */
 
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
-
+let num25 = [1, 2 , 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
-
+document.querySelector('#array').textContent = num25;
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
-
+num25odd = num25.filter(aCount => (aCount % 2) > 0);
+document.querySelector('#odds').textContent = num25odd;
 // Step 4: Use the filter array method to find all of the even numbers of the array variable and assign the result to the HTML element with an ID of "evens"
-
+num25even = num25.filter(aCountAgain => (aCountAgain % 2) < 1);
+document.querySelector('#evens').textContent = num25even;
 // Step 5: Use the reduce array method to sum the array variable elements and assign the result to the HTML element with an ID of "sumOfArray"
-
+num25reduce = num25.reduce((accumulator, aCount) => accumulator += aCount, 0);
+document.querySelector('#sumOfArray').textContent = num25reduce;
 // Step 6: Use the map array method to multiple each element in the array variable by 2 and assign the result to the HTML element with an ID of "multiplied"
-
+num25map = num25.map(aCount => aCount *= 2);
+document.querySelector('#multiplied').textContent = num25map
 // Step 7: Use the map and reduce array methods to sum the array elements after multiplying each element by two.  Assign the result to the HTML element with an ID of "sumOfMultiplied"
+num25total = num25map.reduce((accumulator, aCount) => accumulator += aCount, 0);
+document.querySelector('#sumOfMultiplied').textContent = num25total;
