@@ -74,20 +74,22 @@ let currentBook = document.querySelector('#currentTitle');
 let currentChapter = document.querySelector('#currentChapter');
 let currentVerse = document.querySelector('#currentVerse');
 
-function clear(length){
-    scripturesLength = length
-    let scripturesID
+let scripturesKeep = []
+let discard = []
+function clear(){
+    scripturesLength = scriptures.length;
     while(scripturesLength !== 0){
         if(book !== currentBook && chapter !== currentChapter && verse !== currentVerse){
-            scripturesID = document.getElementById('currentScripture');
-            scripturesID.remove()
+            let element = scriptures.pop()
+            scripturesKeep.push(element)
             scripturesLength = scripturesLength - 1;
         }
+        discard = scriptures.pop()
         scripturesLength = scripturesLength - 1;
     }
 
 }
 
-document.querySelector('#scriptures').textContent = scriptures;
+document.querySelector('#scriptures').textContent = scripturesKeep;
 let element_Id = document.getElementById('FindTheScripture');
 element_Id.addEventListener('click', getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt'));

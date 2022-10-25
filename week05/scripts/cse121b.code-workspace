@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../Downloads/week05CompletedGarrenMeisman"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cse121b"
+	}
+}
