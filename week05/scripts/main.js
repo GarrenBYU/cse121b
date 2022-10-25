@@ -64,8 +64,6 @@ async function getScripture(url){
     if(response.ok){
         scriptures = await response.json();
         output(scriptures)
-        let length = scriptures.length
-        clear(length)
     }
 }
 
@@ -76,10 +74,12 @@ let currentVerse = document.querySelector('#currentVerse');
 
 let scripturesKeep = []
 let discard = []
-function clear(){
+function run(){
+    getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
     scripturesLength = scriptures.length;
     while(scripturesLength !== 0){
-        if(book !== currentBook && chapter !== currentChapter && verse !== currentVerse){
+        getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
+        if(book === currentBook && chapter === currentChapter && verse === currentVerse){
             let element = scriptures.pop()
             scripturesKeep.push(element)
             scripturesLength = scripturesLength - 1;
@@ -92,4 +92,4 @@ function clear(){
 
 document.querySelector('#scriptures').textContent = scripturesKeep;
 let element_Id = document.getElementById('FindTheScripture');
-element_Id.addEventListener('click', getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt'));
+element_Id.addEventListener('click', run);
