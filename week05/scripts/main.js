@@ -18,9 +18,9 @@ y = d.getFullYear()
 
 document.querySelector('#year').textContent = y
 
-let book = document.querySelector('#book');
-let chapter = document.querySelector('#chapter');
-let verse = document.querySelector('#verse');
+let book = document.querySelector('#book').value;
+let chapter = document.querySelector('#chapter').value;
+let verse = document.querySelector('#verse').value;
 
 let scriptures = []
 
@@ -68,24 +68,25 @@ async function getScripture(url){
 }
 
 
-let currentBook = document.querySelector('#currentTitle');
-let currentChapter = document.querySelector('#currentChapter');
-let currentVerse = document.querySelector('#currentVerse');
+let currentBook = document.querySelector('#currentTitle').value;
+let currentChapter = document.querySelector('#currentChapter').value;
+let currentVerse = document.querySelector('#currentVerse').value;
 
 let scripturesKeep = []
 let discard = []
 function run(){
-    getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
+    scriptures = getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
     scripturesLength = scriptures.length;
     while(scripturesLength !== 0){
-        getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
         if(book === currentBook && chapter === currentChapter && verse === currentVerse){
             let element = scriptures.pop()
             scripturesKeep.push(element)
             scripturesLength = scripturesLength - 1;
         }
-        discard = scriptures.pop()
-        scripturesLength = scripturesLength - 1;
+        else{
+            scriptures.remove;
+            scripturesLength = scripturesLength - 1;
+        }
     }
 
 }
