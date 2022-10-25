@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSE 121b: Week 05 | Book Of Mormon Verses</title>
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Lesson 2</a></li>
+            <li><a href="#" class="active">Lesson 3</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Book Of Mormon Scriptures</h1>
+    </header>
+    <main>
+        <section id="scripturequery">
+            <article>
+                <h2>Book of Mormon Scriptures</h2>
+                <div>
+                    <h2>Book Options</h2>
+                    <p>
+                        List of possible books: 1 Nephi, 2 Nephi, Jacob, Enos, Jarom, Omni, Words of Mormon, Mosiah, Alma, Helaman, 3 Nephi, 4 Nephi, Mormon, Ether, Moroni
+                    </p>
+                    <label for="book">Book:</label>
+                    <input type="text" id="book" name="book">
+                </div>
+                <div>
+                    <p>
+                        Type a chapter number
+                    </p>
+                    <label for="chapter">Chapter:</label>
+                    <input type="text" id="chapter" name="chapter">
+                </div>
+                <div>
+                    <p>
+                        Type a verse number
+                    </p>
+                    <label for="verse">Verse:</label>
+                    <input type="text" id="verse" name="verse">
+                </div>
+                <div>
+                    <input type="button" id="FindTheScripture" value="Find The Scripture">
+                </div>
+                <div>
+                    <label for="scripture">Scripture:</label>
+                    <input type="text" id="scripture" name="scripture" disabled>
+                </div>
+            </article>
+            <div id="scripturesAdd">
+            </div>
+        </section>
+        <hr>
+        <section>
+            <h2>Array Methods</h2>
+            <p>
+                List of searched scriptures: <span id="scriptures"></span>
+            </p>
+        </section>
+    </main>
+    <footer>
+        &copy;<span id="year"></span> | Book Of Mormon Scriptures | Lesson 5
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/task3.js"></script>
+</body>
+
+</html>
