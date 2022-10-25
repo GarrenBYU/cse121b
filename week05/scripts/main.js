@@ -76,9 +76,10 @@ let currentVerse = document.querySelector('#currentVerse');
 
 function clear(length){
     scripturesLength = length
+    let scripturesID
     while(scripturesLength !== 0){
         if(book !== currentBook && chapter !== currentChapter && verse !== currentVerse){
-            let scripturesID = document.getElementById('currentScripture');
+            scripturesID = document.getElementById('currentScripture');
             scripturesID.remove()
             scripturesLength = scripturesLength - 1;
         }
