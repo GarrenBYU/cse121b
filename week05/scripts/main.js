@@ -18,6 +18,14 @@ y = d.getFullYear()
 
 document.querySelector('#year').textContent = y
 
+let day = d.getDay();
+if(day == 6){
+    document.querySelector("#day").innerHTML = `Go to church it is Sunday!`
+}
+else{
+    document.querySelector("#day").innerHTML = `Don't Forget To Study!`
+}
+
 
 let scriptures = []
 function output(array){
