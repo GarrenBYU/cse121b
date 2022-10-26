@@ -43,15 +43,7 @@ function output(array){
         let bookTitle = document.createElement('h4');
         article.setAttribute('id', 'currentTitle')
         bookTitle.textContent = `${scripture.book_title} ${scripture.chapter_number}: ${scripture.verse_number}`;
-        /*
-        let chapterNumber = document.createElement('h4');
-        article.setAttribute('id', 'currentChapter')
-        chapterNumber.textContent = scripture.chapter_number;
 
-        let verseNumber = document.createElement('h4');
-        article.setAttribute('id', 'currentVerse')
-        verseNumber.textContent = scripture.verse_number;
-        */
         let scriptureText = document.createElement('p');
         scriptureText.textContent = scripture.scripture_text;
 
@@ -74,53 +66,13 @@ async function getScripture(url){
         output(scriptures)
     }
 }
-/*
-scriptures = getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
-*/
 
-/*
-function reset(length){
-    scripturesLength = length
-    while(scripturesLength !== 0){
-        let templeID = document.getElementById('currentScripture');
-        templeID.remove()
-        scripturesLength = scripturesLength - 1
-    }
-}
-*/
-
-/*
-let scripturesKeep = []
-let discard = []
-function run(){
-    scriptures = getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
-    scripturesLength = scriptures.length;
-    let numberCount = 0
-    bookTitle = document.querySelector('#currentBook')
-    chapterNumber = document.querySelector('#currentChapter')
-    verseNumber = document.querySelector('#currentVerse')
-    while(scripturesLength !== 0){
-        if(book === bookTitle && chapter === chapterNumber && verse === verseNumber){
-            let element = scriptures.pop()
-            scripturesKeep.push(element)
-            scripturesLength = scripturesLength - 1;
-        }
-        else{
-            scriptures.remove;
-            scripturesLength = scripturesLength - 1;
-        }
-    }
-
-}
-*/
 let times = 1
 scriptures = getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
 function showBy(){
-    //if(times !== 1){
-    //    reset(scriptures.length)
-    //}
     getScripture('https://garrenbyu.github.io/cse121b/week05/Scriptures/lds-scriptures-2020.12.08/json/lds-scriptures-json.txt')
     times = 0
 }
+
 let element_Id = document.getElementById('FindTheScripture');
 element_Id.addEventListener('click', showBy);
